@@ -12,7 +12,17 @@ declare namespace RqlQuery {
          * @memberof Query
          */
         eq(property: string, value: any): Query;
-        
+
+        /**
+         * Filters for objects where the specified property's value is like to the provided value. Supports * and ?
+         *
+         * @param {string} property
+         * @param {*} value
+         * @returns {Query}
+         * @memberof Query
+         */
+        like(property: string, value: any): Query;
+
         /**
          * Filters for objects where the specified property's value is not equal to the provided value
          * 

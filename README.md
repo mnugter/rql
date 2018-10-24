@@ -1,3 +1,19 @@
+# Fork information
+This fork merges various other forks to include all relevant fixes and changes.
+
+Merged forks:
+- https://github.com/njust/rql - for webpack compatibility
+- https://github.com/burashka/rql - for like() support (among other fixes)
+
+
+Other forks that might contain relevant code (i.e. are ahead of the main branch):
+- https://github.com/greatcare/rql
+- https://github.com/odin-public/rql
+- https://github.com/rayros/rql
+- https://github.com/zrlay/rql
+- https://github.com/wshager/rql
+
+# RQL
 Resource Query Language (RQL) is a query language designed for use in URIs with object
 style data structures. This project includes the RQL specification and
 provides a JavaScript implementation of query
@@ -127,6 +143,7 @@ for more less operators):
 * or(&lt;query>,&lt;query>,...) - The union of the given queries
 * not(query) - negation
 * eq(&lt;property>,&lt;value>) - Filters for objects where the specified property's value is equal to the provided value
+* like(&lt;property>,&lt;value>) - Filters for objects where the specified property's value is like to the provided value in [glob format][1]
 * lt(&lt;property>,&lt;value>) - Filters for objects where the specified property's value is less than the provided value
 * le(&lt;property>,&lt;value>) - Filters for objects where the specified property's value is less than or equal to the provided value
 * gt(&lt;property>,&lt;value>) - Filters for objects where the specified property's value is greater than the provided value
@@ -215,3 +232,6 @@ See the main APS Standard for more information:
 ### RQL Specification:
 
 * [https://github.com/persvr/rql/tree/master/specification](https://github.com/persvr/rql/tree/master/specification)
+
+
+[1]: https://github.com/xiag-ag/rql-parser/#operators
