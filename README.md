@@ -1,19 +1,3 @@
-# Fork information
-This fork merges various other forks to include all relevant fixes and changes.
-
-Merged forks:
-- https://github.com/njust/rql - for webpack compatibility
-- https://github.com/burashka/rql - for like() support (among other fixes)
-
-
-Other forks that might contain relevant code (i.e. are ahead of the main branch):
-- https://github.com/greatcare/rql
-- https://github.com/odin-public/rql
-- https://github.com/rayros/rql
-- https://github.com/zrlay/rql
-- https://github.com/wshager/rql
-
-# RQL
 Resource Query Language (RQL) is a query language designed for use in URIs with object
 style data structures. This project includes the RQL specification and
 provides a JavaScript implementation of query
