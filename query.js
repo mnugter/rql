@@ -11,17 +11,14 @@
  *	 // for each object that matches the query
  * });
  */
-//({define:typeof define!="undefined"?define:function(deps, factory){module.exports = factory(exports, require("./parser"), require("./js-array"));}}).
-//define(["exports", "./parser", "./js-array"], function(exports, parser, jsarray){
-({define:typeof define!="undefined"?define:function(deps, factory){module.exports = factory(exports, require("./parser"), require("./util/each"));}}).
-define(["exports", "./parser", "./util/each"], function(exports, parser, each){
+function exportFactory(exports, parser, each) {
 
-var parseQuery = parser.parseQuery;
-try{
-	var when = require("promised-io/promise").when;
-}catch(e){
-	when = function(value, callback){callback(value)};
-}
+	var parseQuery = parser.parseQuery, when;
+	try {
+		when = require("promised-io/promise").when;
+	} catch(e){
+		when = function(value, callback){callback(value)};
+	}
 
 	parser.Query = function(seed, params){
 		if (typeof seed === 'string')
